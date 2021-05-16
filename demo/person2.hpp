@@ -1,9 +1,11 @@
 //
-// Created by Akie on 2021/5/15.
+// Created by Akie on 2021/5/16.
 //
-#include<iostream>
+
+#pragma once
+#include <iostream>
 using namespace std;
-//类模板分文件编写问题及解决
+
 template<class T1,class T2>
 class Person{
 public:
@@ -20,13 +22,4 @@ Person<T1,T2>::Person(T1 name,T2 age){
 template<class T1, class T2>
 void Person<T1,T2>::showPerson() {
     cout << "姓名: " << this->m_Name << "年龄: " << this->m_Age <<endl;
-}
-void test01(){
-    Person<string,int> p("Jerry",18);
-    p.showPerson();
-}
-int main(){
-    test01();
-
-    return 0;
 }
